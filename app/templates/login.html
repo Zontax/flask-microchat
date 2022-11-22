@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="form-back">
+	<h1>{{ title }}</h1>
+    <form action="" method="post"  novalidate>
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.username.label }}<br>
+            {{ form.username(size=32) }}<br>
+        {% for error in form.username.errors %}
+            <p class="flash">{{ error }}</p>
+        {% endfor %}
+        </p>
+        <p>
+            {{ form.password.label }}<br>
+            {{ form.password(size=32) }}<br>
+        {% for error in form.password.errors %}
+            <p class="flash">{{ error }}</p>
+        {% endfor %}
+        </p>
+        <p>{{ form.remember_me() }} {{ form.remember_me.label }}</p>
+        <p>{{ form.submit() }}</p>
+    </form>
+    <p>Новий користувач? <a href="{{ url_for('register') }}">Зареєструйтесь!</a></p>
+    <p><a href="{{ url_for('reset_password_request') }}">Забули пароль?</a></p>
+
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <p class="flash">{{ message }}</p> <!-- Неправильне ім'я або пароль -->
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+</div>
+{% endblock %}

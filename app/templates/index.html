@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    {% if form %}
+    <div class="submit_post">
+        <table class="submit_post">
+        <td>
+            <h1>{{ current_user.nickname }}:</h1>
+            <form action="" method="post">
+            {{ form.hidden_tag() }}
+                <p class="p">
+            {{ form.post.label }}<br>
+            {{ form.post(cols=80, rows=4) }}<br>
+            {% for error in form.post.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p class="p">{{ form.submit() }}</p>
+            </form>
+        </td>
+        </table>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <p class="flash-success">{{ message }}</p> <!-- Неправильне ім'я або пароль -->
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    </div>
+        <p class="p"><b>Ваші підписки:</b></p>
+        {% else %}
+        <p class="p2"><b>Всі повідомлення:</b></p>
+        {% endif %}
+
+    {% for post in posts %}
+        {% include '_post.html' %}
+        {% endfor %}
+        <hr>
+        <center>
+    {% if prev_url %}
+        <a class="button-p" href="{{ prev_url }}"><<Назад</a>
+        {% endif %}
+    {% if next_url %}
+        <a class="button-p" href="{{ next_url }}">Вперед>></a>
+        {% endif %}
+        </center>
+{% endblock %}

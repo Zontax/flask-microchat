@@ -1,0 +1,106 @@
+body {
+	/*font-family: 'Comic Sans MS', cursive;*/
+	font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  	background-color: #F2F2F3FF;
+  	color: #151515FF;
+  	margin: 0;
+  	padding: 0;
+  	height: 100%;
+  	width: 100%;}
+div {background-color: white;}
+footer.footer {
+	position: bottom;
+	width: 100%;
+	color: #191919FF;
+	font-size: 17px;
+	background-color: #F2F2F3FF;
+	bottom: 0px;
+	text-align: right;}
+a { 
+	transition: 0.1s;
+	color: #E48F13FF; 
+	text-decoration: none;}
+a:hover {
+	transition: 0.1s;
+	color: #83530BFF;
+	text-decoration: underline;}
+h1 {margin: 0px;}
+p.p {
+	margin-top: 0px;
+	margin-left: 8px;}
+p.p2 {
+	margin-top: 2px;
+	margin-left: 8px;}
+ul.mainmenu {
+	list-style: none;
+	overflow: hidden;
+	background-color: #E48F13FF;
+	margin: 0px;
+	padding: 15px 0px;
+	font-size: 20px;}
+ul.mainmenu li.namesite {float: left;}
+ul.mainmenu li {
+	float: left;
+	margin: 0px 0px 0px 0px;}
+ul.mainmenu li a {
+	text-decoration: none;
+	transition: 0.3s;
+	color: white;
+	padding: 20px 40px;}
+ul.mainmenu li a:hover {
+	transition: 0.3s;
+	color: white;
+	background-color: #F1AB42FF;}
+ul.mainmenu li.username {float: right;}
+div.content {
+	margin: 0px 250px;
+	padding: 20px 16px;}
+div.submit_post {
+	padding: 2px;
+	margin: 0.3% 0.5%;
+	background-color: #F2F2F3FF;
+	border: 1px solid gray;}
+table.user-block {
+	background-color: #F2F2F3FF;
+	border: 1px solid gray;
+	padding: 0px 15px;
+	margin-left: 6px;}
+div.form-back {
+	padding: 15px;
+	margin: 10%;
+	margin-top: 0px;
+	background-color: #F2F2F3FF;
+	border: 1px solid #83530BFF;
+	border-radius: 5px;}
+._post {
+	padding: 2px;
+	margin: 0.3% 0.5%;
+	background-color: #F2F2F3FF;
+	border: 1px solid gray;}
+.timestamp {
+	font-family: 'MS Sans Serif', Geneva, sans-serif;
+	font-size: 15px;
+	color: #151515FF;}
+p.flash {
+	font-size: 19px;
+	padding: 6px;
+	margin-top: -15px;
+	background-color: #FF9C9c;
+	border: 1px solid red;
+	border-radius: 2px;}
+p.flash-success {
+	font-size: 19px;
+	padding: 6px;
+	margin-top: -15px;
+	background-color: #AEFFC5;
+	border: 1px solid green;
+	border-radius: 2px;}
+td.avatar {
+	padding-top: 15px;
+	padding-right: 15px;}
+a.button-p {
+	padding: 7px;
+	background-color: #E48F13FF;
+	color: black;
+	border-radius: 5px;
+}
